@@ -2,6 +2,13 @@ p {
     text-transform: none;
 }
 
+.wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
 header {
     text-align: center;
 }
@@ -11,12 +18,13 @@ nav {
     background-color: #04AA60;
 }
 
-nav a:hover {
+nav a:not(.noHover):hover {
     color: #FFFFFF;
     background-color: #222222;
 }
 
-nav a {float: left;
+nav a {
+    float: left;
     color: #000000;
     text-align: center;
     padding: 14px 16px;
@@ -35,4 +43,14 @@ section {
 img {
     margin-left: 25px;
     filter: drop-shadow(20px 10px 5px cadetblue);
+}
+
+.noHover{
+    pointer-events: none;
+}
+
+@media only screen and (max-width: 600px) {
+    nav {
+        background-color: wheat;
+    }
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memes</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/time-load.js"></script>
+    <script src="scripts/disable-hover.js"></script>
+</head>
+<body style="background-color: aquamarine">
+    <nav>
+        <a id="mainpage" href="MainPage.html">Главная</a>
+        <a id="order" href="Order.html">Заказ</a>
+        <a id="memes" href="Memes.html">Мемы</a>
+        <a id="about" href="About.html">О нас</a>
+    </nav>
+    <br>
+    <div class="wrapper">
+        <img src="pic/pic-1.jpg" width="300" height="300">
+        <img src="pic/pic-2.jpg" width="300" height="300">
+        <img src="pic/pic-3.jpg" width="300" height="300">
+        <img src="pic/skuma.jpg" width="300" height="300">
+    </div>
+    <p id="demo" style="color: red"></p>
+</body>
+<script>
+    window.addEventListener("load", () => document.getElementById("demo").innerHTML = "Time load is " + loadTime() + "c")
+    window.onload = () => {
+    let str = window.location.href
+    disable(str.substr(str.lastIndexOf('/') + 1))
+}
+</script>
+</html>

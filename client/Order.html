@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/time-load.js"></script>
+    <script src="scripts/disable-hover.js"></script>
+</head>
+<body style="background-color: aquamarine">
+    <nav>
+        <a id="mainpage" href="MainPage.html">Главная</a>
+        <a id="order" href="Order.html">Заказ</a>
+        <a id="memes" href="Memes.html">Мемы</a>
+        <a id="about" href="About.html">О нас</a>
+    </nav>
+<main>
+    <h1>В связи с техническими работами заказы временно не принимаются, остерегайтесь поддельных сайтов!</h1>
+</main>
+<footer>
+    <p id="demo" style="color: red"></p>
+</footer>
+</body>
+
+<script>
+    window.addEventListener("load", () => console.log("1"))
+    window.addEventListener("load", () => console.log("2"))
+    window.onload = () => {
+        console.log("1")
+        let str = window.location.href
+        disable(str.substr(str.lastIndexOf('/') + 1))
+    }
+    window.onload = () => {
+        console.log("2");
+    }
+</script>
+</html>

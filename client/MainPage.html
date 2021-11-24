@@ -2,16 +2,16 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Лаба номер 1</title>
+    <title>Main</title>
     <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/disable-hover.js"></script>
 </head>
 <body style="background-color: aquamarine">
-
 <nav>
-    <a href="#">Заказ</a>
-    <a href="#">Доставка</a>
-    <a href="#">Мемы</a>
-    <a href="#">О нас</a>
+    <a id="mainpage" href="MainPage.html">Главная</a>
+    <a id="order" href="Order.html">Заказ</a>
+    <a id="memes" href="Memes.html">Мемы</a>
+    <a id="about" href="About.html">О нас</a>
 </nav>
 
 <header>
@@ -53,7 +53,7 @@
     </section>
     <section>
         <h3>Наш клиент после:</h3>
-        <img src="pic/skuma_1_.jpg" alt="ТУТ КАРТИНКА">
+        <img id="pic" src="pic/skuma_1_.jpg" alt="ТУТ КАРТИНКА">
     </section>
 
     <section>
@@ -74,4 +74,10 @@
 </footer>
 
 </body>
+<script>
+    window.onload = () => {
+        let str = window.location.href
+        disable(str.substr(str.lastIndexOf('/') + 1))
+    }
+</script>
 </html>
