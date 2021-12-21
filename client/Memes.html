@@ -6,21 +6,43 @@
     <link rel="stylesheet" href="css/main.css">
     <script src="scripts/time-load.js"></script>
     <script src="scripts/disable-hover.js"></script>
+    <link rel="stylesheet" href="css/swiper.css">
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
 </head>
 <body style="background-color: aquamarine">
     <nav>
         <a id="mainpage" href="MainPage.html">Главная</a>
         <a id="order" href="Order.html">Заказ</a>
         <a id="memes" href="Memes.html">Мемы</a>
+        <a id="review" href="Review.html">Отзывы</a>
         <a id="about" href="About.html">О нас</a>
     </nav>
     <br>
-    <div class="wrapper">
-        <img src="pic/pic-1.jpg" width="300" height="300">
-        <img src="pic/pic-2.jpg" width="300" height="300">
-        <img src="pic/pic-3.jpg" width="300" height="300">
-        <img src="pic/skuma.jpg" width="300" height="300">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="pic/pic-1.jpg" width="300" height="300"></div>
+            <div class="swiper-slide"><img src="pic/pic-2.jpg" width="300" height="300"></div>
+            <div class="swiper-slide">
+                <img src="pic/pic-3.jpg" width="300" height="300"></div>
+            <div class="swiper-slide"><img src="pic/skuma.jpg" width="300" height="300"></div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
     </div>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
     <p id="demo" style="color: red"></p>
 </body>
 <script>

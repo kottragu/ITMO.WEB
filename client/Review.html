@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reviews</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <script src="scripts/time-load.js"></script>
+    <script src="scripts/disable-hover.js"></script>
+    <script src="scripts/load-comments.js"></script>
+</head>
+<body style="background-color: aquamarine">
+<nav>
+    <a id="mainpage" href="MainPage.html">Главная</a>
+    <a id="order" href="Order.html">Заказ</a>
+    <a id="memes" href="Memes.html">Мемы</a>
+    <a id="review" href="Review.html">Отзывы</a>
+    <a id="about" href="About.html">О нас</a>
+</nav>
+
+<div id="preloader" class="visible">
+</div>
+<br>
+<div id="data">TUT DATA or exception
+</div>
+</body>
+<script>
+    window.addEventListener("load", () => {
+        let str = window.location.href
+        disable(str.substr(str.lastIndexOf('/') + 1))
+    })
+</script>
+</html>

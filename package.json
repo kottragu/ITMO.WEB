@@ -1,0 +1,8 @@
+{
+  "name": "ITMO.WEB",
+  "version": "1.0.0",
+  "dependencies": {
+    "swiper": "^7.3.3",
+    "parcel-bundler": "^1.6.1"
+  }
+}
